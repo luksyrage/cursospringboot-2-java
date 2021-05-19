@@ -25,6 +25,7 @@ public class UserResource {
 		return ResponseEntity.ok().body(list);
 	}
 	
+	//Pesquisando user pelo ID na camada Controller
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id){
 		User obj = service.findById(id);
